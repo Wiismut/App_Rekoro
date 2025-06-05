@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogActivity"
+    android:background="#E9BC8B">
+
+
+
+
+    <TextView
+        android:id="@+id/titleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Добро\nпожаловать\nв Rekoro!"
+        android:textColor="#AA5048"
+        android:textColorLink="#401B17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleMain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:gravity="center"
+        android:text="Сохраняйте историю\nпросмотренного и\nпрочитанного"
+        android:textColor="#AA5048"
+        android:textColorLink="#401B17"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMain"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/titleMain3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:gravity="center"
+        android:text="Уже есть аккаунт?"
+        android:textColor="#AA5048"
+        android:layout_marginTop="25dp"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logButton"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:gravity="center"
+        android:text="Создать\nаккаунт:"
+        android:textColor="#AA5048"
+        android:textColorLink="#401B17"
+        android:textSize="30dp"
+        android:layout_marginVertical="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMain2" />
+
+    <EditText
+        android:id="@+id/login_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#AA5048"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Логин"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#7BAA5048"
+        android:textColorHint="#7BAA5048"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/password_enter"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#AA5048"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Пароль"
+        android:inputType="textPassword|textVisiblePassword"
+
+        android:minHeight="48dp"
+        android:textColor="#7BAA5048"
+
+        android:textColorHint="#7BAA5048"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_enter"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/password2_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#AA5048"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Повторите пароль"
+        android:inputType="textPassword|textVisiblePassword"
+
+        android:minHeight="48dp"
+        android:textColor="#7BAA5048"
+        android:textColorHint="#7BAA5048"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_enter"
+        tools:ignore="TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/main_button"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Зарегистрироваться"
+        android:textAllCaps="false"
+        android:textColor="#E9BC8B"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password2_enter"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/logButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="140dp"
+        android:layout_marginTop="-15dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:onClick="openEnter"
+        android:text="@string/underlined2_button_text"
+        android:textColor="#AA5048"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMain3"
+        tools:ignore="TextSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "870460554630",
+    "project_id": "rekoro-7f629",
+    "storage_bucket": "rekoro-7f629.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870460554630:android:09281f8b03136616778007",
+        "android_client_info": {
+          "package_name": "com.example.rekoro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAleKnV4L8MZ19u2CtLiEMJGqL_2ylsSAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
