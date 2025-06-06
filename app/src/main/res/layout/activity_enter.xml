@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,8 +6,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogActivity"
-    android:background="#E9BC8B">
+    tools:context=".EnterActivity"
+    android:background="#E9BC8B"
+    >
 
 
 
@@ -50,13 +50,13 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_alternates_semibold"
         android:gravity="center"
-        android:text="Уже есть аккаунт?"
+        android:text="Еще нет аккаунта?"
         android:textColor="#AA5048"
         android:layout_marginTop="25dp"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@+id/logButton"
+        android:layout_below="@+id/enterButton"
         tools:ignore="TextSizeCheck" />
 
     <TextView
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_alternates_semibold"
         android:gravity="center"
-        android:text="Создать\nаккаунт:"
+        android:text="Войти"
         android:textColor="#AA5048"
         android:textColorLink="#401B17"
         android:textSize="30dp"
@@ -80,6 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#AA5048"
         android:ems="10"
         android:fontFamily="@font/montserrat_alternates_semibold"
@@ -96,7 +97,6 @@
 
     <EditText
         android:id="@+id/log_password"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="100dp"
@@ -108,7 +108,6 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColor="#7BAA5048"
-
         android:textColorHint="#7BAA5048"
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,54 +115,33 @@
         android:layout_below="@+id/log_login"
         tools:ignore="TextSizeCheck" />
 
-    <EditText
-        android:id="@+id/log_password2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="100dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#AA5048"
-        android:ems="10"
-        android:fontFamily="@font/montserrat_alternates_semibold"
-        android:hint="Повторите пароль"
-        android:inputType="textPassword"
-
-        android:minHeight="48dp"
-        android:textColor="#7BAA5048"
-        android:textColorHint="#7BAA5048"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@+id/log_password"
-        tools:ignore="TextSizeCheck" />
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/logButton"
+        android:id="@+id/enterButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="70dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="140dp"
         android:background="@drawable/main_button"
         android:fontFamily="@font/montserrat_alternates_semibold"
-        android:text="Зарегистрироваться"
-        android:textAllCaps="false"
         android:textColor="#E9BC8B"
+        android:text="Войти"
         android:textSize="20dp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@+id/log_password2"
-        tools:ignore="MissingConstraints" />
+        android:layout_below="@+id/log_password" />
 
     <Button
         android:id="@+id/logButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="140dp"
+        android:layout_marginHorizontal="90dp"
         android:layout_marginTop="-15dp"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/montserrat_alternates_semibold"
-        android:onClick="openEnter"
-        android:text="@string/underlined2_button_text"
+        android:onClick="openLog"
+        android:text="@string/underlined_button_text"
         android:textColor="#AA5048"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
