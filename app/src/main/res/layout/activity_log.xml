@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -13,7 +15,7 @@
 
     <TextView
         android:id="@+id/titleMain"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
@@ -28,7 +30,7 @@
 
     <TextView
         android:id="@+id/titleMain2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/montserrat_alternates_semibold"
@@ -39,12 +41,12 @@
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleMain"
+        android:layout_below="@+id/titleMain"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/titleMain3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_alternates_semibold"
         android:gravity="center"
@@ -54,12 +56,12 @@
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logButton"
+        android:layout_below="@+id/logButton"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/enter"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_alternates_semibold"
         android:gravity="center"
@@ -71,26 +73,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleMain2" />
+        android:layout_below="@+id/titleMain2" />
 
     <EditText
         android:id="@+id/login_enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="100dp"
-        android:layout_marginTop="20dp"
         android:backgroundTint="#AA5048"
         android:ems="10"
         android:fontFamily="@font/montserrat_alternates_semibold"
-        android:hint="Логин"
-        android:inputType="text"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textColor="#7BAA5048"
         android:textColorHint="#7BAA5048"
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter"
+        android:layout_below="@+id/enter"
         tools:ignore="TextSizeCheck" />
 
     <EditText
@@ -104,8 +105,7 @@
         android:ems="10"
         android:fontFamily="@font/montserrat_alternates_semibold"
         android:hint="Пароль"
-        android:inputType="textPassword|textVisiblePassword"
-
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColor="#7BAA5048"
 
@@ -113,7 +113,7 @@
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_enter"
+        android:layout_below="@+id/login_enter"
         tools:ignore="TextSizeCheck" />
 
     <EditText
@@ -126,7 +126,7 @@
         android:ems="10"
         android:fontFamily="@font/montserrat_alternates_semibold"
         android:hint="Повторите пароль"
-        android:inputType="textPassword|textVisiblePassword"
+        android:inputType="textPassword"
 
         android:minHeight="48dp"
         android:textColor="#7BAA5048"
@@ -134,7 +134,7 @@
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_enter"
+        android:layout_below="@+id/password_enter"
         tools:ignore="TextSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -151,7 +151,7 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2_enter"
+        android:layout_below="@+id/password2_enter"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -168,8 +168,8 @@
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleMain3"
+        android:layout_below="@+id/titleMain3"
         tools:ignore="TextSizeCheck" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
