@@ -48,6 +48,9 @@ public class EnterActivity extends AppCompatActivity {
                                     if(task.isSuccessful()){
                                         startActivity(new Intent(EnterActivity.this, MainActivity.class));
                                     }
+                                    else{
+                                        Toast.makeText(EnterActivity.this, "Проверьте корректность данных!", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
                 }

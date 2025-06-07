@@ -53,6 +53,10 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
 
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("com.google.firebase:firebase-firestore:24.9.0")
+
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-database")
         // implementation("com.rengwuxian.materialedittext:library:2.1.4")

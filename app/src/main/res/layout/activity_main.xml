@@ -15,10 +15,10 @@
         android:id="@+id/enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="25dp"
+        android:layout_marginVertical="50dp"
         android:fontFamily="@font/montserrat_alternates_semibold"
         android:gravity="center"
-        android:text="ЭТО ВТОРАЯ\nСТРАНИЦА!!!"
+        android:text="Тайтлы"
         android:textColor="#AA5048"
         android:textColorLink="#401B17"
         android:textSize="30dp"
@@ -26,13 +26,42 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="18dp"
-        android:text="Button" />
+        android:layout_marginTop="15dp"
+        android:background="@drawable/exit" />
+
+    <TextView
+        android:id="@+id/userEmailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/exit"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:layout_toStartOf="@+id/exit"
+        android:gravity="center"
+        android:text="email"
+        android:textColor="#AA5048"
+        android:textSize="18sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="63dp"
+        android:backgroundTint="#AA5048"
+        android:clickable="true"
+        app:fabCustomSize="75dp"
+        app:srcCompat="@drawable/plus"
+        app:tint="#FFC280" />
 
 
 </RelativeLayout>
