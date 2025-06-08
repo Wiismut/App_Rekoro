@@ -7,9 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#E9BC8B"
-    >
-
+    android:background="#E9BC8B">
 
     <TextView
         android:id="@+id/enter"
@@ -48,6 +46,21 @@
         android:text="email"
         android:textColor="#AA5048"
         android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addButton"
+        android:layout_below="@+id/enter"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/tasksContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"
