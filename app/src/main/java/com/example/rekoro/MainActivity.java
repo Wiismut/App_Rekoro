@@ -1,6 +1,10 @@
 package com.example.rekoro;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +16,8 @@ import android.widget.TextView;
 import android.app.Dialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseUser;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 
 import androidx.activity.EdgeToEdge;
@@ -117,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
 
         categoryText.setText(task.getCategory());
         titleText.setText(task.getTitle());
-        progressText.setText("Прогресс: " + task.getProgress());
-        countText.setText("Всего: " + task.getCount());
+        progressText.setText(task.getProgress() + "/");
+        countText.setText(task.getCount());
 
         CardView showWind = taskView.findViewById(R.id.card);
 
@@ -149,8 +155,33 @@ public class MainActivity extends AppCompatActivity {
         Button deleteButton = dialog.findViewById(R.id.deleteButton);
         Button editButton = dialog.findViewById(R.id.editButton);
         deleteButton.setOnClickListener(v -> {
-            deleteTask(task.getId());
-            dialog.dismiss();
+
+            showAlertDialog(MainActivity.this, "Удаление записи", "Удалить?",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface alertDialog, int which) {
+
+                            deleteTask(task.getId());
+
+                            dialog.dismiss();
+                        }
+                    },
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface alertDialog, int which) {
+                            dialog.dismiss();
+                        }
+                    }
+            );
+
+            //dialog.dismiss();
+
+           // deleteTask(task.getId());
+            //dialog.dismiss();
+
+
+
+
         });
         editButton.setOnClickListener(v -> {
             dialog.dismiss();
@@ -158,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         dialog.show();
-
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         if (dialog.getWindow() != null) {
             dialog.getWindow().setLayout(
                     (int)(getResources().getDisplayMetrics().widthPixels * 0.9),
@@ -166,6 +197,18 @@ public class MainActivity extends AppCompatActivity {
             );
         }
     }
+
+    private void showAlertDialog(Context context, String title, String message, DialogInterface.OnClickListener positiveListener, DialogInterface.OnClickListener negativeListener){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setPositiveButton("Да", positiveListener);
+        if (negativeListener != null) {
+            builder.setNegativeButton("Отмена", negativeListener);
+        }
+        builder.show();
+    }
+
     private void deleteTask(String taskId) {
         db.collection("users")
                 .document(userId)
@@ -221,10 +264,11 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Ошибка при сохранении изменений", Toast.LENGTH_SHORT).show();
                     });
         });
-
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
         if (dialog.getWindow() != null) {
             dialog.getWindow().setLayout(
+
                     (int)(getResources().getDisplayMetrics().widthPixels * 0.9),
                     (int)(getResources().getDisplayMetrics().heightPixels * 0.5)
             );
@@ -272,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
                         });
             }
         });
-
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
         if (dialog.getWindow() != null) {
             dialog.getWindow().setLayout(

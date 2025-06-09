@@ -3,5 +3,9 @@
     <style name="Base.Theme.Rekoro" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">#FFC280</item>
+    </style>
+    <style name="AddButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="strokeColor">#2196F3</item>
     </style>
 </resources>
