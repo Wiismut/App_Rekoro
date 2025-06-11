@@ -321,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
         if (dialog.getWindow() != null) {
             dialog.getWindow().setLayout(
                     (int)(getResources().getDisplayMetrics().widthPixels * 0.9),
-                    (int)(getResources().getDisplayMetrics().heightPixels * 0.5)
+                    (int)(getResources().getDisplayMetrics().heightPixels * 0.7)
             );
         }
     }
