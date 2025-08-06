@@ -52,6 +52,11 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-storage:21.0.2")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation ("com.firebaseui:firebase-ui-database:8.0.2")
 
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.google.android.material:material:1.12.0")

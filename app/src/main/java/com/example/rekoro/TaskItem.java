@@ -7,15 +7,17 @@ public class TaskItem {
     private String count;
     private String description;
     private String id;
+    private String imageUrl;
     public TaskItem() {
     }
 
-    public TaskItem(String category, String title, String progress, String count, String description) {
+    public TaskItem(String category, String title, String progress, String count, String description, String imageUrl) {
         this.category = category;
         this.title = title;
         this.progress = progress;
         this.count = count;
         this.description = description;
+        this.imageUrl = imageUrl;
     }
     public String getId() {
         return id;
@@ -29,6 +31,8 @@ public class TaskItem {
     public String getProgress() { return progress; }
     public String getCount() { return count; }
     public String getDescription() { return description; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
     public void setCategory(String category) { this.category = category; }
     public void setTitle(String title) { this.title = title; }

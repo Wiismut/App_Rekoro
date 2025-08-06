@@ -40,7 +40,15 @@
                 android:background="#AA5048"
 
                 />
-
+            <ImageView
+                android:id="@+id/imageTitle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/add_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
             <TextView
                 android:id="@+id/description"
                 android:layout_width="0dp"
@@ -56,7 +64,7 @@
                 android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title" />
+                app:layout_constraintTop_toBottomOf="@+id/imageTitle" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
