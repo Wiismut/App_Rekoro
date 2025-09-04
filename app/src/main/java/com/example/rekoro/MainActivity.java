@@ -318,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
                 byte[] decodedString = Base64.decode(task.getImageUrl(), Base64.DEFAULT);
                 Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
                 imageTitle.setImageBitmap(decodedByte);
-                ImageUri = getImageUri(this, decodedByte);
+                ImageUri = null;
             } catch (Exception e) {
                 imageTitle.setImageResource(R.drawable.add_image);
             }
